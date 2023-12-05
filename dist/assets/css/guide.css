@@ -11,7 +11,9 @@
 .guide_vitem_title{display:flex;align-items: flex-end;font-size:0;line-height:0;gap:10px;font-weight:500;color:#29303d;}
 .guide_type_text{display:inline-block;line-height:1;font-size:36px;}
 .guide_type_unit{display:inline-block;line-height:1;font-size:19px;position:relative;top:-1px;}
+.guide_vitem_text{display:inline-block;line-height:1;font-size:30px;color:#29303d;}
 .guide_vitem_content{padding:90px 0 0 0;}
+.guide_vitem_content.type3{padding:25px 44px;}
 .guide_vitem_content.type2{border-bottom:1px solid #dfdfdf;}
 .guide_vitem_single_contents{}
 
@@ -23,4 +25,5 @@
     .guide_type_text{font-size:24px;}
     .guide_type_unit{font-size:16px;}
     .guide_vitem_content{padding:45px 0 0 0;}
+    .guide_vitem_content.type3{padding:25px 20px;}
 }

@@ -2291,7 +2291,6 @@ function myIntroFunc(){
 	let myintroObj = null;
 	let windowWidth = window.innerWidth;
 	if(swiperSlide.length>4){
-		console.log('test')
 		if(myintroObj !== null){
 			myintroObj.update();
 		}else{
@@ -2515,6 +2514,7 @@ function zigzagFunc(){
 				}else{
 					zigzag_swiper.params.slidesPerView = 2;
 				}
+				zigzag_swiper.update();
 			}
 
 			function initOption(){
@@ -2527,6 +2527,91 @@ function zigzagFunc(){
 
 
 			//zigzag_swiper.params.slidesPerView = 2;
+		}
+	}
+}
+
+
+function bannerCall(target){
+	const targetArray = target;
+	if(!!targetArray){
+		targetArray.forEach((item)=>{
+			bannerFunc(item);
+		});
+	}
+	function bannerFunc(container){
+		const banner_zone = document.querySelector(container);
+		const banner_container = !!banner_zone ? banner_zone.querySelector(".banner_container") : null;
+		const banner_slide = !!banner_zone ? banner_zone.querySelectorAll(".swiper-slide") : null;
+		const fraction_current = !!banner_zone ? banner_zone.querySelector(".fraction_current") : null;
+		const fraction_length = !!banner_zone ? banner_zone.querySelector(".fraction_length") : null;
+		const btn_auto_control_auto = !!banner_zone ? banner_zone.querySelector(".btn_auto_control.play") : null;
+		const btn_auto_control_stop = !!banner_zone ? banner_zone.querySelector(".btn_auto_control.stop") : null;
+		let banner_swiper = null;
+		let getWindowWid = window.innerWidth;
+		
+		
+		let pcOption = {
+			slidesPerView: 3,
+			spaceBetween : 16,
+			loop : true,
+			navigation: {
+				nextEl: container+" .btn_swiper_control.next",
+				prevEl: container+" .btn_swiper_control.prev",
+			},
+			pagination: {
+				el: container+" .swiper-pagination",
+				type: "fraction",
+			},
+			autoplay: {
+				delay: 2500,
+				disableOnInteraction: false,
+			},
+		};
+		
+		let mbOption = {
+			slidesPerView: 2,
+			spaceBetween : 10,
+			loop : true,
+			navigation: {
+				nextEl: container+" .btn_swiper_control.next",
+				prevEl: container+" .btn_swiper_control.prev",
+			},
+			pagination: {
+				el: container+" .swiper-pagination",
+				type: "fraction",
+			},
+		};
+		if(!!banner_slide){
+			if(banner_swiper !== null){
+				banner_swiper.update();
+			}else{
+				initOption();
+				banner_swiper = new Swiper(container+ " .banner_container",option);
+				
+				window.addEventListener("resize",()=>{
+					optionChange();
+				});
+	
+				function optionChange(){
+					if(window.innerWidth > 1023){
+						banner_swiper.params.spaceBetween = 16;
+						banner_swiper.params.slidesPerView = 3;
+					}else{
+						banner_swiper.params.spaceBetween = 10;
+						banner_swiper.params.slidesPerView = 2;
+					}
+					banner_swiper.update();
+				}
+	
+				function initOption(){
+					if(window.innerWidth > 1023){
+						option = pcOption;
+					}else{
+						option = mbOption;
+					}
+				}
+			}
 		}
 	}
 }
