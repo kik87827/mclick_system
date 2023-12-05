@@ -17,7 +17,7 @@
 
 
 @media (max-width:1023px){
-    .guide_vitem_wrap.type2 .guide_vitem_title_row{padding:20px 44px;}
+    .guide_vitem_wrap.type2 .guide_vitem_title_row{padding:20px;}
     .guide_vitem{padding:20px 0 60px;}
     .guide_vitem_title_row{padding:0 20px;}
     .guide_type_text{font-size:24px;}

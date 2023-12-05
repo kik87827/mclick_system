@@ -2438,19 +2438,22 @@ function gridGalleryFunc(){
 	resizeAction();
 	$(window).on("resize",function(){
 		if(window_wid !== $(window).width()){
-			resizeAction();
+			setTimeout(function(){
+				resizeAction();
+			},30);
 		}
 		window_wid = $(window).width();
-	});
+	}).resize();
 
 	function resizeAction(){
 		if($(window).width()>1023){
 			gutter_value = 35;
 		}else{
-			gutter_value = 20;
+			gutter_value = 10;
 		}
 		$('.grid_gallery_wrap').masonry({
-			gutter : gutter_value
+			gutter : gutter_value,
+			transitionDuration: '0s'
 		});
 	}
 }
