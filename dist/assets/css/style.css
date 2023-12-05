@@ -322,3 +322,142 @@ img.grid_gallery_thum_img{}
     .paging_num_list{margin:0;gap:3px;}
     .btn_paging_control i{transform: scale(0.7);}
 }
+
+
+
+/* banner */
+.banner_container_zone{}
+.banner_container_wrap{}
+.banner_control_wrap{}
+.btn_swiper_control{}
+.btn_swiper_control.prev{}
+.btn_swiper_control.next{}
+.banner_container.swiper-container{}
+.banner_container.swiper-container .swiper-wrapper{}
+.banner_container.swiper-container .swiper-slide{}
+.product_card_item{}
+.product_card_thum{}
+.product_card_thum img{}
+.product_card_spec{}
+.product_spec_main{}
+.product_spec_sub{}
+.product_spec_price{}
+.product_card_item .price_obj_group{}
+.product_card_item .price_obj_main{}
+.product_card_item .price_obj_unit{}
+.banner_control_wrap{}
+.banner_control_item{}
+.banner_fraction_group{}
+.fraction_current{}
+.fraction_part{}
+.fraction_length{}
+.btn_auto_control{}
+.btn_auto_control.stop{}
+.btn_auto_control.play{}
+
+.banner_container_zone.type2{}
+.banner_container_zone.type2 .banner_container_wrap{}
+.banner_container_zone.type2 .banner_container.swiper-container{}
+
+.banner_container_zone.type2 .btn_swiper_control{}
+.banner_container_zone.type2 .btn_swiper_control.prev{}
+.banner_container_zone.type2 .btn_swiper_control.next{}
+
+
+.customer_zone{}
+.customer_global_title_wrap{}
+.customer_global_title_wrap:before{}
+.customer_global_title{}
+.customer_global_title_main{}
+.customer_global_title_sub{}
+.customer_content_wrap{}
+.customer_content_cols{}
+.customer_content_cols:last-of-type{}
+.customer_cbox{}
+.cbox_tab_list_wrap{}
+.cbox_tab_list{}
+.cbox_tab_list > li{}
+.cbox_tab_list > li:last-of-type{}
+.cbox_tab{}
+.cbox_tab:after{}
+.cbox_tab_text{}
+.cbox_tab.active{}
+.cbox_tab.active:after{}
+.cbox_tab.active .cbox_tab_text{}
+.cbox_tab_cont_wrap{}
+.cbox_tab_cont{}
+.cbox_tab_cont.active{}
+.cbox_cont_block{}
+.cbox_cont_block:last-of-type{}
+.btn_linkage_more{}
+.btn_linkage_more:before{}
+.btn_linkage_more:after{}
+.linkage_data_list{}
+.linkage_data_list > li{}
+.linkage_data_list > li:last-of-type{}
+.linkage_data_list.dot_type{}
+.linkage_data_list.dot_type > li{}
+.linkage_main{}
+.linkage_keyword{}
+.linkage_main_link{}
+.linkage_else{}
+
+.customer_grid_system{}
+.customer_grid_cols{}
+.customer_grid_title_row{}
+.customer_grid_title{}
+.customer_grid_title.eng_type{}
+.customer_grid_ico{}
+.customer_grid_ico.ico_head{}
+.customer_grid_content{}
+.customer_grid_in_title{}
+
+
+.customer_guide_data_list{}
+.customer_guide_data_list > li{}
+.customer_guide_data_list > li:last-of-type{}
+
+.customer_guide_data_list.type2{}
+.customer_guide_data_list.type2 > li{}
+
+.customer_guide_obj{}
+.customer_guide_key{}
+.customer_guide_value{}
+.customer_guide_obj.call_layer{}
+.customer_guide_obj.call_layer:after{}
+.customer_sub_para{}
+.customer_sub_para.emp{}
+
+.customer_guide_layer{}
+.customer_guide_title_row{}
+.customer_guide_title{}
+.customer_guide_contents{}
+.btn_guide_layer_close{}
+.btn_guide_layer_close:before,
+.btn_guide_layer_close:after{}
+.btn_guide_layer_close:before{}
+.btn_guide_layer_close:after{}
+
+.customer_guide_link_list{}
+.customer_guide_link_list > li{}
+.customer_guide_link_list > li:last-of-type{}
+
+.customer_number_link{}
+
+.customer_guide_data_table{}
+.customer_guide_data_table > li{}
+.customer_guide_th_cols,
+.customer_guide_td_cols{}
+.customer_guide_th_cols{}
+.customer_guide_td_cols{}
+
+.customer_guide_key{}
+.customer_guide_link{}
+
+.customer_img_banner{}
+.customer_img_banner img{}
+img.img_banner_bg{}
+
+.customer_copy_group{}
+.customer_copy_main{}
+.customer_copy_sub{}
