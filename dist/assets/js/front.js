@@ -2694,6 +2694,11 @@ function customerFunc(){
 				e.preventDefault();
 				const thisItem = e.currentTarget;
 				const thisTarget = document.querySelector(thisItem.getAttribute("href"));
+
+				customer_guide_layer_wrap.forEach((item)=>{
+					const thisItem = item;
+					item.classList.remove("active");
+				});
 				if(!!thisTarget){
 					thisTarget.classList.toggle("active");
 				}
