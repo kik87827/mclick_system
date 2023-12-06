@@ -549,4 +549,7 @@ img.img_banner_bg{}
 
     .linkage_main_link,
     .cbox_tab_text{font-size:14px;}
+
+    .linkage_main{gap:5px;}
+    .linkage_keyword{font-size:12px;}
 }
