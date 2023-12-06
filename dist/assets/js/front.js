@@ -2708,6 +2708,13 @@ function customerFunc(){
 				const thisParent = thisItem.closest(".customer_guide_layer_wrap");
 				thisParent.classList.remove("active");
 			})
-		})
+		});
+		document.querySelector("body").addEventListener("click",(e)=>{
+			if(!e.target.closest(".customer_guide_layer_wrap , .call_layer")){
+				customer_guide_layer_wrap.forEach((item)=>{
+					item.classList.remove("active");
+				});	
+			}
+		});
 	}
 }
