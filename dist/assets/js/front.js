@@ -2612,6 +2612,102 @@ function bannerCall(target){
 					}
 				}
 			}
+			if(!!btn_auto_control_auto){
+				btn_auto_control_auto.addEventListener("click",()=>{
+					banner_swiper.autoplay.start();
+				});
+			}
+			if(!!btn_auto_control_stop){
+				btn_auto_control_stop.addEventListener("click",()=>{
+					banner_swiper.autoplay.stop();
+				});
+			}
 		}
+	}
+}
+
+
+
+function customerFunc(){
+	const cbox_tab = document.querySelectorAll(".cbox_tab");
+	const call_layer = document.querySelectorAll(".call_layer");
+	const page_wrap = document.querySelector(".page_wrap");
+	const customer_guide_layer_wrap = document.querySelectorAll(".customer_guide_layer_wrap");
+	const btn_guide_layer_close = document.querySelectorAll(".btn_guide_layer_close");
+	if(!!cbox_tab){
+		cbox_tab.forEach((item)=>{
+			item.addEventListener("click",(e)=>{
+				e.preventDefault();
+				const thisItem = e.currentTarget;
+				const thisParent = thisItem.closest(".cbox_tab_list_wrap");
+				const thisNotItem = thisParent.querySelectorAll(".cbox_tab");
+				const thisTarget = thisItem.getAttribute("href");
+				const thisTargetDom = document.querySelector(thisTarget);
+				const thisTargetNot = siblings(thisTargetDom);
+
+				if(!!thisTargetDom){
+					thisNotItem.forEach((item)=>{
+						if(item !== thisItem){
+							item.classList.remove("active");
+						}
+					})
+					thisItem.classList.add("active");
+
+					thisTargetNot.forEach((item)=>{
+						if(item !== thisTargetDom){
+							item.classList.remove("active");
+						}
+					});
+					thisTargetDom.classList.add("active");
+				}
+			});
+		});
+	}
+	if(!!customer_guide_layer_wrap){
+		window.addEventListener("resize",()=>{
+			posLayer();
+		});
+		customer_guide_layer_wrap.forEach((item)=>{
+			const thisItem = item;
+
+			page_wrap.append(thisItem);
+		});
+		posLayer();
+	}
+
+	function posLayer(){
+		customer_guide_layer_wrap.forEach((item)=>{
+			const thisItem = item;
+			const thisBtn = document.querySelector("[href='#"+thisItem.getAttribute("id")+"']");
+			const thisParent = thisBtn.closest(thisBtn.dataset.callparent)
+
+			thisItem.style.removeProperty("top","left","width");
+
+			thisItem.style.top = window.scrollY + thisBtn.getBoundingClientRect().top + thisBtn.getBoundingClientRect().height + 10 + "px";
+			thisItem.style.left = thisParent.getBoundingClientRect().left + "px";
+			thisItem.style.width = thisParent.getBoundingClientRect().width + "px";
+		});
+	}
+	if(!!call_layer){
+		call_layer.forEach((item)=>{
+			item.addEventListener("click",(e)=>{
+				e.preventDefault();
+				const thisItem = e.currentTarget;
+				const thisTarget = document.querySelector(thisItem.getAttribute("href"));
+				if(!!thisTarget){
+					thisTarget.classList.toggle("active");
+				}
+			});
+		})
+	}
+	if(!!btn_guide_layer_close){
+		btn_guide_layer_close.forEach((item)=>{
+			item.addEventListener("click",(e)=>{
+				e.preventDefault();
+				const thisItem = e.currentTarget;
+				const thisParent = thisItem.closest(".customer_guide_layer_wrap");
+				thisParent.classList.remove("active");
+			})
+		})
 	}
 }
