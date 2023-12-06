@@ -544,14 +544,25 @@ img.img_banner_bg{}
     .customer_grid_banner_row.type2{display:flex;}
     .customer_grid_banner_row.type2 .customer_grid_box{height:100%;}
     .customer_grid_banner_row.type2 .customer_grid_cols{margin-bottom:0}
+    
+    .customer_grid_guide_row.type2 .customer_grid_ico{flex-basis: 30px; width:30px;height:30px;}
+    .customer_grid_guide_row.type2 .customer_grid_title{padding-bottom:10px;}
+    .customer_grid_guide_row.type2 .customer_grid_title{font-size:14px;}
+    .customer_grid_guide_row.type2 .customer_guide_value{font-size:14px;}
+    .customer_grid_guide_row.type2 .customer_guide_key{font-size:12px;}
+    .customer_grid_guide_row.type2 .customer_guide_obj.call_layer:after{width:8px;height:8px;}
+    .customer_grid_guide_row.type2 .customer_grid_in_title{font-size:12px;}
+    .customer_grid_guide_row.type2 .customer_sub_para{font-size:13px;}
+
+
+    .customer_guide_obj.call_layer:after{top:auto;bottom:8px;}
 
     .customer_guide_layer_wrap.type2{width:calc(100% - 40px) !important;left:20px !important;}
-    .customer_guide_layer_wrap.type2 .customer_guide_data_table,
-    .customer_guide_layer_wrap.type2 .customer_guide_data_table > li,
+    /* .customer_guide_layer_wrap.type2 .customer_guide_data_table,
+    .customer_guide_layer_wrap.type2 .customer_guide_data_table > li, */
     /* .customer_guide_layer_wrap.type2 .customer_guide_th_cols,
     .customer_guide_layer_wrap.type2 .customer_guide_td_cols{display:block;width:auto;}
     .customer_guide_layer_wrap.type2 .customer_guide_key{white-space: normal;} */
-
     .customer_guide_obj{gap:2px 10px}
     .customer_grid_box{height:auto;}
     .customer_img_banner{display:block;min-height:100%;height:auto;/* padding-bottom:52.11267605633803%; */}
@@ -569,12 +580,12 @@ img.img_banner_bg{}
     .linkage_keyword{font-size:12px;}
 
     .customer_copy_group{padding:15px;position:relative;}
-    .customer_copy_main{font-size:16px;}
-    .customer_copy_sub{font-size:13px;}
+    .customer_copy_main{font-size:15px;}
+    .customer_copy_sub{font-size:12px;}
 }
 
 @media (max-width:359px){
     .customer_grid_title_row{gap:10px;flex-direction: column;align-items: flex-start;}
     .customer_grid_title{flex:1;width:100%;}
-    .customer_grid_ico{flex-basis: 30px; width:30px;height:30px;}
+    
 }
