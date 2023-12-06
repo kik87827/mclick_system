@@ -410,7 +410,7 @@ img.grid_gallery_thum_img{}
 .customer_content_cols{}
 .customer_content_cols:last-of-type{}
 .customer_cbox{background:#f1f7f9;border-radius:10px;box-sizing: border-box;padding:10px;display:flex;flex-direction: column;height:100%;}
-.cbox_tab_list_wrap{flex:0 0 43px;margin-bottom:12px;position:relative;overflow:hidden;overflow-x:auto;}
+.cbox_tab_list_wrap{flex:0 0 43px;margin:0 42px 12px 0;position:relative;overflow:hidden;overflow-x:auto;}
 .cbox_tab_list_wrap::-webkit-scrollbar{width:0;height:0;}
 
 .cbox_tab_list{display:flex;gap:10px;}
