@@ -2539,14 +2539,16 @@ function bannerCall(target){
 			bannerFunc(item);
 		});
 	}
-	function bannerFunc(container){
-		const banner_zone = document.querySelector(container);
+	function bannerFunc(option){
+		console.log(option)
+		const banner_zone = document.querySelector(option.container);
 		const banner_container = !!banner_zone ? banner_zone.querySelector(".banner_container") : null;
 		const banner_slide = !!banner_zone ? banner_zone.querySelectorAll(".swiper-slide") : null;
 		const fraction_current = !!banner_zone ? banner_zone.querySelector(".fraction_current") : null;
 		const fraction_length = !!banner_zone ? banner_zone.querySelector(".fraction_length") : null;
 		const btn_auto_control_auto = !!banner_zone ? banner_zone.querySelector(".btn_auto_control.play") : null;
 		const btn_auto_control_stop = !!banner_zone ? banner_zone.querySelector(".btn_auto_control.stop") : null;
+		let banner_option_count = !!option.mb_view ? option.mb_view : 2;
 		let banner_swiper = null;
 		let getWindowWid = window.innerWidth;
 		
@@ -2556,11 +2558,11 @@ function bannerCall(target){
 			spaceBetween : 16,
 			loop : true,
 			navigation: {
-				nextEl: container+" .btn_swiper_control.next",
-				prevEl: container+" .btn_swiper_control.prev",
+				nextEl: option.container+" .btn_swiper_control.next",
+				prevEl: option.container+" .btn_swiper_control.prev",
 			},
 			pagination: {
-				el: container+" .swiper-pagination",
+				el: option.container+" .swiper-pagination",
 				type: "fraction",
 			},
 			autoplay: {
@@ -2570,15 +2572,15 @@ function bannerCall(target){
 		};
 		
 		let mbOption = {
-			slidesPerView: 2,
+			slidesPerView: banner_option_count,
 			spaceBetween : 10,
 			loop : true,
 			navigation: {
-				nextEl: container+" .btn_swiper_control.next",
-				prevEl: container+" .btn_swiper_control.prev",
+				nextEl: option.container+" .btn_swiper_control.next",
+				prevEl: option.container+" .btn_swiper_control.prev",
 			},
 			pagination: {
-				el: container+" .swiper-pagination",
+				el: option.container+" .swiper-pagination",
 				type: "fraction",
 			},
 		};
@@ -2587,7 +2589,7 @@ function bannerCall(target){
 				banner_swiper.update();
 			}else{
 				initOption();
-				banner_swiper = new Swiper(container+ " .banner_container",option);
+				banner_swiper = new Swiper(option.container+ " .banner_container",inner_option);
 				
 				window.addEventListener("resize",()=>{
 					optionChange();
@@ -2599,16 +2601,16 @@ function bannerCall(target){
 						banner_swiper.params.slidesPerView = 3;
 					}else{
 						banner_swiper.params.spaceBetween = 10;
-						banner_swiper.params.slidesPerView = 2;
+						banner_swiper.params.slidesPerView = banner_option_count;
 					}
 					banner_swiper.update();
 				}
 	
 				function initOption(){
 					if(window.innerWidth > 1023){
-						option = pcOption;
+						inner_option = pcOption;
 					}else{
-						option = mbOption;
+						inner_option = mbOption;
 					}
 				}
 			}
