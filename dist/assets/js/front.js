@@ -2725,3 +2725,28 @@ function customerFunc(){
 		});
 	}
 }
+
+
+function bothBannerSwiper(){
+	const swiper_modern_container = document.querySelectorAll(".swiper-modern-container");
+	if(!!swiper_modern_container){
+		swiper_modern_container.forEach((item,index)=>{
+			item.setAttribute("id","swiper"+(index+1));
+			swiperAction("#"+"swiper"+(index+1))
+		});
+	}
+	function swiperAction(target){
+		const targetContainer = document.querySelector(target);
+		const targetSlide = targetContainer.querySelectorAll(".swiper-slide");
+		let swiperObj = null;
+		if(!!targetSlide){
+			swiperObj = new Swiper(target,{
+				loop : true,
+				pagination: {
+					clickable: true,
+					el: target+" .swiper-pagination",
+				},
+			});
+		}
+	}
+}

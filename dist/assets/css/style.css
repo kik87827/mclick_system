@@ -119,6 +119,10 @@
 .modern_card_box_list_wrap.box_type2{}
 .modern_card_box_list_wrap.box_type2 .modern_sub_spec{border-top:0;padding-top:0;margin-top:15px;}
 
+.swiper-modern-zone{}
+
+.swiper-modern-zone .swiper-pagination{margin-top:30px;}
+
 .paging_wrap{display:flex; justify-content: center; align-items: center;gap:8px; margin-top:50px;}
 .btn_paging_control{display:flex;border-radius:100%;width:28px;height:28px;border:1px solid #dfdfdf;align-items: center; justify-content: center; background:#fff;}
 .btn_paging_control i{width:14px;height:12px;display:block;position:relative;}
@@ -274,6 +278,9 @@ img.grid_gallery_thum_img{}
 
     .product_obj_package.dtype2{padding:0;}
     .product_obj_package.dtype2 .product_obj_inner{padding:50px 20px 60px;}
+
+    .swiper-modern-zone{margin:0 -20px;}
+    .swiper-modern-zone .modern_card_box_list{padding:0 20px;}
 
     .modern_card_box{gap:15px;}
     .modern_card_thum_cols{flex-basis: 40%;}
